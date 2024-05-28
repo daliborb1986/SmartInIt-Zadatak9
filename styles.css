@@ -214,9 +214,10 @@ body {
 
 /* ///// Survey CSS ////// */
 
-#firstName {
-  font-size: 13px;
+#noteToUser {
+  font-size: 15px;
   color: #72807c;
+
 }
 .bg-color-survey {
   background-color: #b0e5db;

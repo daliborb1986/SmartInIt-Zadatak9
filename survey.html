@@ -70,7 +70,7 @@
               <li class="nav-item">
                 <a
                   class="nav-link mx-lg-3 text-light navigation-button"
-                  href="#contact"
+                  href="./survey.html"
                   >Survey</a
                 >
               </li>
@@ -78,14 +78,12 @@
           </div>
         </div>
       </nav>
-      <section class="survey-section bg-color d-flex flex-column d-none">
+      <section class="survey-section bg-color d-flex flex-column">
         <div class="container-fluid text-center mt-5">
           <div class="mt-5">
-            <h5 class="fw-bold fst-italic">Portfolio</h5>
+            <h5 id="titleHeader">Portfolio</h5>
           </div>
-          <h3 class="text-uppercase fw-bold">
-            Wondering if tech is right for you?
-          </h3>
+          <h3 id="firstPageTitle">Wondering if tech is right for you?</h3>
           <p>Take this 3-minute survey and find out.</p>
           <button
             id="startButton"
@@ -110,7 +108,7 @@
               <div class="col col-lg-12">
                 <h3 class="fw-bold">Before we dive in, what's your name?</h3>
                 <label for="name"
-                  ><span id="firstName">(First name's fine!)</span></label
+                  ><span id="noteToUser">(First name's fine!)</span></label
                 >
                 <br />
                 <div class="input-group my-2">
@@ -360,10 +358,10 @@
           </div>
         </div>
       </section>
-     
+
       <section
         id="page4"
-        class="survey-section bg-color d-flex align-items-start "
+        class="survey-section bg-color d-flex align-items-start d-none"
       >
         <div
           class="container d-flex flex-column justify-content-center align-items-start mt-5"
@@ -464,6 +462,47 @@
                   class="btn btn-dark rounded-0 px-3 mt-1 text-uppercase"
                 >
                   Next
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="page5"
+        class="survey-section bg-color d-flex align-items-start"
+      >
+        <div
+          class="container d-flex flex-column justify-content-center align-items-start mt-5"
+        >
+          <div class="row align-self-center mt-5">
+            <div class="offset-md-1 col col-md-10">
+              <div class="offset-md-1 col-3 mt-5 text-center">
+                <h6 class="bg-color-survey p-1 px-2">Question 5 of 5</h6>
+              </div>
+              <div class="offset-md-1 col-md-10 mb-1">
+                <h3 class="fw-bold mt-2">
+                  Just one more thing! How much you like this survey?
+                </h3>
+                <span id="noteToUser">(We hope think you'll like it!)</span>
+              </div>
+              <div class="offset-md-1 col-md-10 mb-1 align-items-center">
+                <label for="customRange2" class="form-label mt-2">1-5</label>
+                <input
+                  type="range"
+                  class="form-range"
+                  min="1"
+                  max="5"
+                  id="customRange2"
+                />
+              </div>
+
+              <div class="offset-md-1">
+                <button
+                  id="nextButton"
+                  class="btn btn-dark rounded-0 px-3 mt-1 text-uppercase"
+                >
+                  Submit
                 </button>
               </div>
             </div>
