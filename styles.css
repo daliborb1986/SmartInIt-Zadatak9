@@ -7,6 +7,9 @@ body {
   margin: 0;
   padding: 0;
 }
+.bg-color {
+  background-color: #11af9f;
+}
 .about {
   margin-bottom: 50px;
 }
@@ -199,6 +202,7 @@ body {
   width: 80px;
   padding: 30px;
 }
+
 .png-image {
   width: 50px;
   height: 50px;
@@ -207,3 +211,11 @@ body {
 .png-image > img {
   width: 35px;
 }
+
+/* ///// Survey CSS ////// */
+
+.survey-section {
+  height: 100vh;
+  
+}
+
