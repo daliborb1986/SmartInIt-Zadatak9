@@ -95,19 +95,20 @@
           </button>
         </div>
       </section>
-      <section id="page1" class="survey-section bg-color d-flex align-items-start">
+      <section
+        id="page1"
+        class="survey-section bg-color d-flex align-items-start d-none"
+      >
         <div
           class="container d-flex flex-column justify-content-center align-items-start mt-5"
         >
           <div class="row align-self-center mt-5">
-            <div class="col col-lg-3 mt-5">
+            <div class="col col-lg-4 mt-5">
               <h6 class="bg-color-survey p-1 text-center">Question 1 of 5</h6>
             </div>
             <div class="row row align-self-center">
               <div class="col col-lg-12">
-                <h3 class="fw-bold">
-                  Before we dive in, what's your name?
-                </h3>
+                <h3 class="fw-bold">Before we dive in, what's your name?</h3>
                 <label for="name"
                   ><span id="firstName">(First name's fine!)</span></label
                 >
@@ -118,13 +119,125 @@
                     type="text"
                     class="form-control"
                     placeholder="Type your answer here..."
-                    name="name" 
+                    name="name"
                     required
                   />
                 </div>
                 <button
                   id="nextButton"
                   class="btn btn-dark rounded-0 px-3 mt-2 text-uppercase"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="page2"
+        class="survey-section bg-color d-flex align-items-start"
+      >
+        <div
+          class="container d-flex flex-column justify-content-center align-items-start mt-5"
+        >
+          <div class="row align-self-center mt-5">
+            <div class="offset-lg-1 col col-lg-4 mt-5">
+              <h6 class="bg-color-survey p-1 px-2">Question 2 of 5</h6>
+            </div>
+            <div class="row row align-self-center">
+              <div class="offset-lg-1 col col-lg-12">
+                <h3 class="fw-bold mt-2">Where are you in your career?</h3>
+
+                <div
+                  class="col col-lg-10 p-2 mb-1 bg-color-survey d-flex align-items-center border border-dark"
+                >
+                  <div class="input-div mx-2">
+                    <input type="radio" id="q1" name="q1" />
+                  </div>
+                  <div class="label-div">
+                    <label class="p-1" for="q1"
+                      >I know what career I want. and I need to learn some
+                      skills</label
+                    >
+                  </div>
+                </div>
+                <div
+                  class="col col-lg-10 p-2 mb-1 bg-color-survey d-flex align-items-center border border-dark"
+                >
+                  <div class="input-div mx-2">
+                    <input type="radio" id="q1" name="q1" />
+                  </div>
+                  <div class="label-div">
+                    <label class="p-1" for="q1"
+                      >I like my career--or, at least, I don't HATE it--but I
+                      keep wondering if there's something more out there.</label
+                    >
+                  </div>
+                </div>
+                <div
+                  class="col col-lg-10 p-2 mb-1 bg-color-survey d-flex align-items-center border border-dark"
+                >
+                  <div class="input-div mx-2">
+                    <input type="radio" id="q1" name="q1" />
+                  </div>
+                  <div class="label-div">
+                    <label class="p-1" for="q1"
+                      >I took a break from my career, and now I'm ready to get
+                      back into the workforce</label
+                    >
+                  </div>
+                </div>
+                <div
+                  class="col col-lg-10 p-2 mb-1 bg-color-survey d-flex align-items-center border border-dark"
+                >
+                  <div class="input-div mx-2">
+                    <input type="radio" id="q1" name="q1" />
+                  </div>
+                  <div class="label-div">
+                    <label class="p-1" for="q1"
+                      >I want to make a career change, but I'm also super
+                      busy.</label
+                    >
+                  </div>
+                </div>
+                <div
+                  class="col col-lg-10 p-2 mb-1 bg-color-survey d-flex align-items-center border border-dark"
+                >
+                  <div class="input-div mx-2">
+                    <input type="radio" id="q1" name="q1" />
+                  </div>
+                  <div class="label-div">
+                    <label class="p-1" for="q1">I'm just starting out.</label>
+                  </div>
+                </div>
+                <div
+                  class="col col-lg-10 p-2 mb-1 bg-color-survey d-flex align-items-center border border-dark"
+                >
+                  <div class="input-div mx-2">
+                    <input type="radio" id="q1" name="q1" />
+                  </div>
+                  <div class="label-div">
+                    <label class="p-1" for="q1"
+                      >I'm burnt out from going into an office every day and
+                      ready to make my own hours</label
+                    >
+                  </div>
+                </div>
+                <div
+                  class="col col-lg-10 p-1 bg-color-survey d-flex align-items-center border border-dark"
+                >
+                  <div class="input-div mx-2">
+                    <input type="radio" id="q1" name="q1" />
+                  </div>
+                  <div class="label-div">
+                    <label class="p-1" for="q1">Other (please enter)!</label>
+                  </div>
+                </div>
+                <button
+                  id="nextButton"
+                  class="btn btn-dark rounded-0 px-3 mt-1 text-uppercase"
                 >
                   Next
                 </button>
