@@ -214,8 +214,13 @@ body {
 
 /* ///// Survey CSS ////// */
 
+#firstName {
+  font-size: 13px;
+  color: #72807c;
+}
+.bg-color-survey {
+  background-color: #c2cfcc;
+}
 .survey-section {
   height: 100vh;
-  
 }
-
