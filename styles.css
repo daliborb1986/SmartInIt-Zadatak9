@@ -219,7 +219,10 @@ body {
   color: #72807c;
 }
 .bg-color-survey {
-  background-color: #c2cfcc;
+  background-color: #b0e5db;
+}
+.bg-color-answer {
+  background-color: #ddece9;
 }
 .survey-section {
   height: 100vh;
