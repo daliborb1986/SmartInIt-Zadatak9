@@ -30,3 +30,9 @@ function changePage() {
 }
 
 btnStart.addEventListener('click', changePage);
+
+const userNote = document.getElementById('noteToUser');
+
+userNote.classList.add("noteToUser");
+
+const userName = document.getElementById("name").value;
