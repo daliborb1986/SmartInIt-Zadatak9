@@ -16,6 +16,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./styles.css" />
     <title>Survey</title>
   </head>
@@ -81,13 +88,13 @@
 
       <section
         id="startPage"
-        class="survey-section bg-color d-flex flex-column"
+        class="survey-section bg-color d-flex flex-column d-none"
       >
         <div class="container-fluid text-center mt-5">
           <div class="mt-5">
             <h5 id="titleHeader">Portfolio</h5>
           </div>
-          <h3 id="firstPageTitle">Wondering if tech is right for you?</h3>
+          <h3 id="titleUpperCase">Wondering if tech is right for you?</h3>
           <p>Take this 3-minute survey and find out.</p>
           <button
             id="startButton"
@@ -150,7 +157,7 @@
             </div>
             <div class="row row align-self-center">
               <div class="offset-lg-1 col col-lg-12">
-                <h3 class="fw-bold mt-2">Where are you in your career?</h3>
+                <h3 class="pageTitle mt-2">Where are you in your career?</h3>
 
                 <div
                   class="col col-lg-10 p-2 mb-1 bg-color-survey d-flex align-items-center border border-dark"
@@ -274,7 +281,7 @@
                 <h6 class="bg-color-survey p-1 px-2">Question 3 of 5</h6>
               </div>
               <div class="offset-lg-1 col-lg-7 mb-1">
-                <h3 class="fw-bold mt-2">
+                <h3 class="pageTitle mt-2">
                   What's your biggest concern about learning tech skills?
                 </h3>
               </div>
@@ -381,7 +388,7 @@
                 <h6 class="bg-color-survey p-1 px-2">Question 4 of 5</h6>
               </div>
               <div class="offset-lg-1 col-lg-7 mb-1">
-                <h3 class="fw-bold mt-2">
+                <h3 class="pageTitle mt-2">
                   Picture the perfect workplace for you. What do you see?
                 </h3>
               </div>
@@ -491,7 +498,7 @@
                 <h6 class="bg-color-survey p-1 px-2">Question 5 of 5</h6>
               </div>
               <div class="offset-md-1 col-md-10 mb-1">
-                <h3 class="fw-bold mt-2">
+                <h3 class="pageTitle mt-2">
                   Just one more thing! How much you like this survey?
                 </h3>
                 <span id="noteToUser">(We hope think you'll like it!)</span>
@@ -517,6 +524,19 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- Pages depending on user given score -->
+
+      <section id="page6" class="survey-section bg-color d-flex flex-column">
+        <div class="container-fluid text-center mt-5">
+          <div class="mt-5">
+            <h5 id="greetingName"><span id="userInputName"></span></h5>
+          </div>
+          <h3 id="pageTitle">Thank you for your time!</h3>
+          <p>We appreciate your opinion. Oooops, sorry to disappoint you.</p>
+          <img src="./img/001-crying.png" alt="Crying smiley" />
         </div>
       </section>
     </div>

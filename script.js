@@ -11,19 +11,19 @@ const btnStart = document.getElementById('startButton');
 const userNote = document.getElementById('noteToUser');
 const choiceOther = document.getElementById('q7');
 const inputOtherAnswer = document.getElementById('inputDiv');
-const btnPage2 = document.getElementById('goToPage3')
-const btnPage3 = document.getElementById('goToPage4')
-const btnPage4 = document.getElementById('goToPage5')
-
-const radioButtons = document.querySelectorAll('input[name="question"]');
-
+const btnPage2 = document.getElementById('goToPage3');
+const btnPage3 = document.getElementById('goToPage4');
+const btnPage4 = document.getElementById('goToPage5');
+const btnSubmit = document.getElementById('submitButton');
+const titleBold = document.getElementById('pageTitle');
 var titleHeader = document.getElementById('titleHeader');
-var titleUpperCase = document.getElementById('firstPageTitle');
+var titleUpperCase = document.getElementById('titleUpperCase');
 const question = document.getElementById('question');
 var firstName = document.getElementById('name');
+var userInputName = document.getElementById('userInputName');
 
 // ----- CSS style ----- //
-
+titleBold.style.fontWeight = 'bold';
 titleUpperCase.style.textTransform = 'uppercase';
 titleUpperCase.style.fontWeight = 'bold';
 
@@ -39,6 +39,7 @@ btnNext.addEventListener('click', nextPageWithName);
 btnPage2.addEventListener('click', goToPage3);
 btnPage3.addEventListener('click', goToPage4);
 btnPage4.addEventListener('click', goToPage5);
+btnSubmit.addEventListener('click', goToPage6);
 
 // ---- Functions ----- //
 
@@ -58,19 +59,28 @@ function nextPageWithName() {
   }
 }
 
-
-function goToPage3(){
+function goToPage3() {
   page2.classList.toggle('d-none');
   page3.classList.toggle('d-none');
 }
-function goToPage4(){
+function goToPage4() {
   page3.classList.toggle('d-none');
   page4.classList.toggle('d-none');
 }
-function goToPage5(){
+function goToPage5() {
   page4.classList.toggle('d-none');
   page5.classList.toggle('d-none');
 }
+function goToPage6() {
+  page5.classList.toggle('d-none');
+  page6.classList.toggle('d-none');
+}
+btnSubmit.addEventListener('click', greeting);
+function greeting() {
+  userInputName.innerHTML = 'Hi ' + firstName.value;
+  userInputName.style.fontWeight = 'bold';
+}
+
 radioButtons.forEach((radio) => {
   radio.addEventListener('change', function () {
     if (choiceOther.checked) {
@@ -80,22 +90,3 @@ radioButtons.forEach((radio) => {
     }
   });
 });
-let currentDivIndex = 0;
-
-
-
-
-// function showPage(index) {
-//   pages.forEach((div, i) => {
-//     if (i === index) {
-//       div.classList.remove('d-none');
-//     } else {
-//       div.classList.add('d-none');
-//     }
-//   });
-// }
-
-// btnNext.addEventListener('click', function(){
-//   currentDivIndex = (currentDivIndex + 1) % pages.length;
-//   showPage(currentDivIndex);
-// })
