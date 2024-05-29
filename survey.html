@@ -105,7 +105,7 @@
           class="container d-flex flex-column justify-content-center align-items-start mt-5"
         >
           <div class="row align-self-center mt-5">
-            <div class="col col-lg-4 mt-5">
+            <div class="col-4 mt-5">
               <h6 class="bg-color-survey p-1 text-center">Question 1 of 5</h6>
             </div>
             <div class="row row align-self-center">
@@ -234,19 +234,23 @@
                     <input type="radio" id="q7" name="question" />
                   </div>
                   <div class="label-div">
-                    <label class="p-1" for="q7">Other (please enter)!</label>
+                    <label id="choiceOther" class="p-1" for="q7"
+                      >Other (please enter)!</label
+                    >
                   </div>
                 </div>
-                <input
-                  class="col col-lg-10 p-3 mt-1 mb-2 bg-color-answer d-flex align-items-center border border-2 border-dark rounded-1 d-none"
-                  type="text"
-                  name="input-answer"
-                  id="input-answer"
-                  placeholder="Type your answer here..."
-                />
+                <div id="inputDiv" class="inputDiv col col-lg-10 d-none">
+                  <input
+                    class="col-12 col-md-12 p-3 mt-1 mb-2 bg-color-answer border border-2 border-dark rounded-1"
+                    type="text"
+                    name="input-answer"
+                    id="input-answer"
+                    placeholder="Type your answer here..."
+                  />
+                </div>
 
                 <button
-                  id="nextButton"
+                  id="goToPage4"
                   class="btn btn-dark rounded-0 px-3 mt-1 text-uppercase"
                 >
                   Next
@@ -274,7 +278,7 @@
                 </h3>
               </div>
               <div
-                class="offset-lg-1 col-lg-10 p-2 mb-1 bg-color-survey d-flex align-items-center border border-dark"
+                class="offset-lg-1 col col-lg-10 p-2 mb-1 bg-color-survey d-flex align-items-center border border-dark"
               >
                 <div class="input-div mx-2">
                   <input type="radio" id="question3-1" name="questions3" />

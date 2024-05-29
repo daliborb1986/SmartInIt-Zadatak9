@@ -5,11 +5,20 @@ const page1 = document.getElementById('page1');
 const page2 = document.getElementById('page2');
 const page3 = document.getElementById('page3');
 const page4 = document.getElementById('page4');
+const page5 = document.getElementById('page5');
 const startPage = document.getElementById('startPage');
 const btnStart = document.getElementById('startButton');
 const userNote = document.getElementById('noteToUser');
+const choiceOther = document.getElementById('q7');
+const inputOtherAnswer = document.getElementById('inputDiv');
+const btnPage4 = document.getElementById('goToPage4')
+
+const radioButtons = document.querySelectorAll('input[name="question"]');
+const pages = [page3, page4, page5];
 var titleHeader = document.getElementById('titleHeader');
 var titleUpperCase = document.getElementById('firstPageTitle');
+const question = document.getElementById('question');
+var firstName = document.getElementById('name');
 
 // ----- CSS style ----- //
 
@@ -22,13 +31,13 @@ userNote.classList.add('noteToUser');
 
 // ----Event listeners ---- //
 
-btnStart.addEventListener('click', changePage);
 btnNext.addEventListener('click', checkFirstName);
+btnStart.addEventListener('click', changePage);
 btnNext.addEventListener('click', nextPageWithName);
+btnPage4.addEventListener('click', goToPage4);
 
 // ---- Functions ----- //
 
-var firstName = document.getElementById('name');
 function checkFirstName() {
   if (!firstName.value) {
     alert('Name must be filled out');
@@ -36,9 +45,7 @@ function checkFirstName() {
 }
 function changePage() {
   startPage.classList.toggle('d-none');
-  if (page1.classList.contains('d-none')) {
-    page1.classList.toggle('d-none');
-  }
+  page1.classList.toggle('d-none');
 }
 function nextPageWithName() {
   if (firstName.value) {
@@ -46,3 +53,35 @@ function nextPageWithName() {
     page2.classList.toggle('d-none');
   }
 }
+function goToPage4(){
+  page2.classList.toggle('d-none');
+  page3.classList.toggle('d-none');
+}
+radioButtons.forEach((radio) => {
+  radio.addEventListener('change', function () {
+    if (choiceOther.checked) {
+      inputOtherAnswer.classList.remove('d-none');
+    } else {
+      inputOtherAnswer.classList.add('d-none');
+    }
+  });
+});
+let currentDivIndex = 0;
+
+
+
+
+// function showPage(index) {
+//   pages.forEach((div, i) => {
+//     if (i === index) {
+//       div.classList.remove('d-none');
+//     } else {
+//       div.classList.add('d-none');
+//     }
+//   });
+// }
+
+// btnNext.addEventListener('click', function(){
+//   currentDivIndex = (currentDivIndex + 1) % pages.length;
+//   showPage(currentDivIndex);
+// })
