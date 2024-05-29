@@ -11,10 +11,12 @@ const btnStart = document.getElementById('startButton');
 const userNote = document.getElementById('noteToUser');
 const choiceOther = document.getElementById('q7');
 const inputOtherAnswer = document.getElementById('inputDiv');
-const btnPage4 = document.getElementById('goToPage4')
+const btnPage2 = document.getElementById('goToPage3')
+const btnPage3 = document.getElementById('goToPage4')
+const btnPage4 = document.getElementById('goToPage5')
 
 const radioButtons = document.querySelectorAll('input[name="question"]');
-const pages = [page3, page4, page5];
+
 var titleHeader = document.getElementById('titleHeader');
 var titleUpperCase = document.getElementById('firstPageTitle');
 const question = document.getElementById('question');
@@ -34,7 +36,9 @@ userNote.classList.add('noteToUser');
 btnNext.addEventListener('click', checkFirstName);
 btnStart.addEventListener('click', changePage);
 btnNext.addEventListener('click', nextPageWithName);
-btnPage4.addEventListener('click', goToPage4);
+btnPage2.addEventListener('click', goToPage3);
+btnPage3.addEventListener('click', goToPage4);
+btnPage4.addEventListener('click', goToPage5);
 
 // ---- Functions ----- //
 
@@ -53,9 +57,19 @@ function nextPageWithName() {
     page2.classList.toggle('d-none');
   }
 }
-function goToPage4(){
+
+
+function goToPage3(){
   page2.classList.toggle('d-none');
   page3.classList.toggle('d-none');
+}
+function goToPage4(){
+  page3.classList.toggle('d-none');
+  page4.classList.toggle('d-none');
+}
+function goToPage5(){
+  page4.classList.toggle('d-none');
+  page5.classList.toggle('d-none');
 }
 radioButtons.forEach((radio) => {
   radio.addEventListener('change', function () {
