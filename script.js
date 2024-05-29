@@ -15,7 +15,8 @@ const btnPage2 = document.getElementById('goToPage3');
 const btnPage3 = document.getElementById('goToPage4');
 const btnPage4 = document.getElementById('goToPage5');
 const btnSubmit = document.getElementById('submitButton');
-const titleBold = document.getElementById('pageTitle');
+
+const radioButtons = document.querySelectorAll('.radio-button');
 var titleHeader = document.getElementById('titleHeader');
 var titleUpperCase = document.getElementById('titleUpperCase');
 const question = document.getElementById('question');
@@ -23,7 +24,6 @@ var firstName = document.getElementById('name');
 var userInputName = document.getElementById('userInputName');
 
 // ----- CSS style ----- //
-titleBold.style.fontWeight = 'bold';
 titleUpperCase.style.textTransform = 'uppercase';
 titleUpperCase.style.fontWeight = 'bold';
 
@@ -76,6 +76,7 @@ function goToPage6() {
   page6.classList.toggle('d-none');
 }
 btnSubmit.addEventListener('click', greeting);
+
 function greeting() {
   userInputName.innerHTML = 'Hi ' + firstName.value;
   userInputName.style.fontWeight = 'bold';
@@ -90,3 +91,10 @@ radioButtons.forEach((radio) => {
     }
   });
 });
+function bold() {
+  var titleBold = document.querySelectorAll('.pageTitle');
+  for (var i = 0; i < titleBold.length; i++) {
+    titleBold[i].style.fontWeight = 'bold';
+  }
+}
+bold();
