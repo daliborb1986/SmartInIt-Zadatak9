@@ -39,7 +39,8 @@ btnNext.addEventListener('click', nextPageWithName);
 btnPage2.addEventListener('click', goToPage3);
 btnPage3.addEventListener('click', goToPage4);
 btnPage4.addEventListener('click', goToPage5);
-btnSubmit.addEventListener('click', goToPage6);
+btnSubmit.addEventListener('click', submitTwo);
+
 
 // ---- Functions ----- //
 
@@ -71,17 +72,14 @@ function goToPage5() {
   page4.classList.toggle('d-none');
   page5.classList.toggle('d-none');
 }
-function goToPage6() {
-  page5.classList.toggle('d-none');
-  page6.classList.toggle('d-none');
-}
-btnSubmit.addEventListener('click', greeting);
 
 function greeting() {
-  userInputName.innerHTML = 'Hi ' + firstName.value;
-  userInputName.style.fontWeight = 'bold';
+  var userInputName = document.querySelectorAll('.greetingName');
+  for (var i = 0; i < userInputName.length; i++) {
+    userInputName[i].innerHTML = 'Hi ' + firstName.value;
+    userInputName[i].style.fontWeight = 'bold';
+  }
 }
-
 radioButtons.forEach((radio) => {
   radio.addEventListener('change', function () {
     if (choiceOther.checked) {
@@ -98,3 +96,40 @@ function bold() {
   }
 }
 bold();
+
+function sliderValue() {
+  var range = parseInt(document.getElementById('slider').value, 10);
+  switch (range) {
+    case 1:
+      var page6 = document.getElementById('page6');
+      page5.classList.toggle('d-none');
+      page6.classList.toggle('d-none');
+      break;
+    case 2:
+      var page7 = document.getElementById('page7');
+      page5.classList.toggle('d-none');
+      page7.classList.toggle('d-none');
+      break;
+    case 3:
+      var page8 = document.getElementById('page8');
+      page5.classList.toggle('d-none');
+      page8.classList.toggle('d-none');
+      break;
+    case 4:
+      var page9 = document.getElementById('page9');
+      page5.classList.toggle('d-none');
+      page9.classList.toggle('d-none');
+      break;
+    case 5:
+      var page10 = document.getElementById('page10');
+      page5.classList.toggle('d-none');
+      page10.classList.toggle('d-none');
+      break;
+    default:
+      console.log('Something wrong.');
+  }
+}
+function submitTwo() {
+  greeting();
+  sliderValue();
+}
